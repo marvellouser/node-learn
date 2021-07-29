@@ -1,0 +1,4 @@
+{
+  "watch": ["*.js", "*.json"],
+  "ingore": ["package*.json", "nodemon.json", "node_moudles"]
+}

@@ -19,3 +19,17 @@ exports.updateStudent = async function (id, obj) {
     },
   });
 };
+
+exports.getStudents = async function (page = 1, limit = 10) {
+  const results = await Student.findAll({
+    offset: (page - 1) * limit,
+    limit: +limit,
+  })
+
+  const total = await Student.count();
+  console.log(total);
+  return {
+    datas: JSON.parse(JSON.stringify(results)),
+    total,
+  }
+}

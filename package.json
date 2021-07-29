@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon -x npm run server",
+    "server": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,12 +18,14 @@
   },
   "homepage": "https://github.com/marvellouser/node-learn#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "mockjs": "^1.1.0",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
     "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.10"
+    "cheerio": "^1.0.0-rc.10",
+    "nodemon": "^2.0.12"
   }
 }
